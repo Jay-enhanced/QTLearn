@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icon/Bold-icon.png</file>
+        <file>icon/copy-icon.png</file>
+        <file>icon/cut-icon.png</file>
+        <file>icon/Eraser-icon.png</file>
+        <file>icon/Exit-icon.png</file>
+        <file>icon/File-new-icon.png</file>
+        <file>icon/folder-open-icon.png</file>
+        <file>icon/Fonts-icon.png</file>
+        <file>icon/Italic-icon.png</file>
+        <file>icon/paste-icon.png</file>
+        <file>icon/Under-LineText-icon.png</file>
+    </qresource>
+</RCC>
