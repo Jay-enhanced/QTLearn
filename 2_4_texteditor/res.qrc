@@ -11,5 +11,6 @@
         <file>icon/Italic-icon.png</file>
         <file>icon/paste-icon.png</file>
         <file>icon/Under-LineText-icon.png</file>
+        <file>icon/Checkbox-icon.png</file>
     </qresource>
 </RCC>

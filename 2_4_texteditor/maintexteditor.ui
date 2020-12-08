@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1256</width>
+    <height>606</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>104</width>
-      <height>64</height>
+      <x>0</x>
+      <y>0</y>
+      <width>241</width>
+      <height>231</height>
      </rect>
     </property>
    </widget>
@@ -30,7 +30,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>1256</width>
      <height>17</height>
     </rect>
    </property>
@@ -54,8 +54,8 @@
     <property name="title">
      <string>Format</string>
     </property>
-    <addaction name="actionBold"/>
     <addaction name="actionItalic"/>
+    <addaction name="actionBold"/>
     <addaction name="actionUnderline"/>
     <addaction name="separator"/>
     <addaction name="actionToolbarLab"/>
@@ -79,16 +79,16 @@
    <addaction name="actionCopy"/>
    <addaction name="actionPatse"/>
    <addaction name="separator"/>
-   <addaction name="actionBold"/>
    <addaction name="actionItalic"/>
+   <addaction name="actionBold"/>
    <addaction name="actionUnderline"/>
    <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/folder-open-icon.png</normaloff>icon/folder-open-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/folder-open-icon.png</normaloff>:/images/icon/folder-open-icon.png</iconset>
    </property>
    <property name="text">
     <string>Open</string>
@@ -102,8 +102,8 @@
   </action>
   <action name="actionCut">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/cut-icon.png</normaloff>icon/cut-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/cut-icon.png</normaloff>:/images/icon/cut-icon.png</iconset>
    </property>
    <property name="text">
     <string>Cut</string>
@@ -117,8 +117,8 @@
   </action>
   <action name="actionCopy">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/copy-icon.png</normaloff>icon/copy-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/copy-icon.png</normaloff>:/images/icon/copy-icon.png</iconset>
    </property>
    <property name="text">
     <string>Copy</string>
@@ -129,8 +129,8 @@
   </action>
   <action name="actionPatse">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/paste-icon.png</normaloff>icon/paste-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/paste-icon.png</normaloff>:/images/icon/paste-icon.png</iconset>
    </property>
    <property name="text">
     <string>Patse</string>
@@ -144,8 +144,8 @@
   </action>
   <action name="actionClose">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/Exit-icon.png</normaloff>icon/Exit-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/Exit-icon.png</normaloff>:/images/icon/Exit-icon.png</iconset>
    </property>
    <property name="text">
     <string>Close</string>
@@ -156,8 +156,8 @@
   </action>
   <action name="actionClear">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/Eraser-icon.png</normaloff>icon/Eraser-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/Eraser-icon.png</normaloff>:/images/icon/Eraser-icon.png</iconset>
    </property>
    <property name="text">
     <string>Clear</string>
@@ -168,8 +168,8 @@
   </action>
   <action name="actionNew">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/File-new-icon.png</normaloff>icon/File-new-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/File-new-icon.png</normaloff>:/images/icon/File-new-icon.png</iconset>
    </property>
    <property name="text">
     <string>New</string>
@@ -182,9 +182,12 @@
    </property>
   </action>
   <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
-    <iconset>
-     <normaloff>icon/Bold-icon.png</normaloff>icon/Bold-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/Bold-icon.png</normaloff>:/images/icon/Bold-icon.png</iconset>
    </property>
    <property name="text">
     <string>Bold</string>
@@ -196,25 +199,13 @@
     <string>Ctrl+B</string>
    </property>
   </action>
-  <action name="actionItalic">
-   <property name="icon">
-    <iconset>
-     <normaloff>icon/Italic-icon.png</normaloff>icon/Italic-icon.png</iconset>
-   </property>
-   <property name="text">
-    <string>Italic</string>
-   </property>
-   <property name="toolTip">
-    <string>Italic</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+I</string>
-   </property>
-  </action>
   <action name="actionUnderline">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
-    <iconset>
-     <normaloff>icon/Under-LineText-icon.png</normaloff>icon/Under-LineText-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/Under-LineText-icon.png</normaloff>:/images/icon/Under-LineText-icon.png</iconset>
    </property>
    <property name="text">
     <string>Underline</string>
@@ -228,8 +219,8 @@
   </action>
   <action name="actionFont">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/Fonts-icon.png</normaloff>icon/Fonts-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/Fonts-icon.png</normaloff>:/images/icon/Fonts-icon.png</iconset>
    </property>
    <property name="text">
     <string>Font</string>
@@ -240,8 +231,8 @@
   </action>
   <action name="actionToolbarLab">
    <property name="icon">
-    <iconset>
-     <normaloff>icon/Checkbox-icon.png</normaloff>icon/Checkbox-icon.png</iconset>
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/Checkbox-icon.png</normaloff>:/images/icon/Checkbox-icon.png</iconset>
    </property>
    <property name="text">
     <string>ToolbarLab</string>
@@ -250,8 +241,109 @@
     <string>Show toolbar label</string>
    </property>
   </action>
+  <action name="actionItalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/icon/Italic-icon.png</normaloff>:/images/icon/Italic-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Italic</string>
+   </property>
+   <property name="toolTip">
+    <string>Italic</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
- <connections/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionCopy</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCut</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClose</sender>
+   <signal>triggered()</signal>
+   <receiver>MainTextEditor</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>627</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPatse</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
