@@ -9,6 +9,7 @@ MainTextEditor::MainTextEditor(QWidget *parent) :
 {
     ui->setupUi(this);
     initUI();
+    initSignalSlots();
 }
 
 MainTextEditor::~MainTextEditor()
@@ -49,6 +50,12 @@ void MainTextEditor::initUI()
     setCentralWidget(ui->textEdit);
 }
 
+void MainTextEditor::initSignalSlots()
+{
+    connect(spinFontSize, SIGNAL(valueChanged(int)), this, SLOT(on_spinBoxFontSize_valueChanged(int)));
+    connect(comboFont, SIGNAL(currentIndexChanged(QString)), this, SLOT(on_comboFont_currentIndexChanged(const QString &arg1)));
+}
+
 void MainTextEditor::on_actionBold_triggered(bool checked)
 {
     //这种方法是改变格式，对接下来的输入有效，或者对选中的有效
@@ -80,5 +87,38 @@ void MainTextEditor::on_actionUnderline_triggered(bool checked)
     QTextCharFormat fmt;
     fmt = ui->textEdit->currentCharFormat();
     fmt.setFontUnderline(checked);
+    ui->textEdit->mergeCurrentCharFormat(fmt);
+}
+
+void MainTextEditor::on_textEdit_copyAvailable(bool b)
+{
+    ui->actionCut->setEnabled(b);
+    ui->actionCopy->setEnabled(b);
+    ui->actionPatse->setEnabled(ui->textEdit->canPaste());
+}
+
+void MainTextEditor::on_textEdit_selectionChanged()
+{
+    QTextCharFormat fmt;
+    //fmt = ui->textEdit->currentCharFormat();
+    ui->actionItalic->setChecked(fmt.fontItalic());
+    ui->actionBold->setChecked(fmt.font().bold());
+    ui->actionUnderline->setChecked(fmt.fontUnderline());
+}
+
+void MainTextEditor::on_spinBoxFontSize_valueChanged(int aFontSize)
+{
+    QTextCharFormat fmt;
+    //fmt = ui->textEdit->currentCharFormat();
+    fmt.setFontPointSize(aFontSize);
+    ui->textEdit->mergeCurrentCharFormat(fmt);
+    progressBar1->setValue(aFontSize);
+}
+
+void MainTextEditor::on_comboFont_currentIndexChanged(const QString &arg1)
+{
+    QTextCharFormat fmt;
+    fmt = ui->textEdit->currentCharFormat();
+    fmt.setFontFamily(arg1);
     ui->textEdit->mergeCurrentCharFormat(fmt);
 }

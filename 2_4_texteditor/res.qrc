@@ -13,4 +13,5 @@
         <file>icon/Under-LineText-icon.png</file>
         <file>icon/Checkbox-icon.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

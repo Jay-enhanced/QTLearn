@@ -26,6 +26,14 @@ private slots:
 
     void on_actionUnderline_triggered(bool checked);
 
+    void on_textEdit_copyAvailable(bool b);
+
+    void on_textEdit_selectionChanged();
+
+    void on_spinBoxFontSize_valueChanged(int aFontSize);
+
+    void on_comboFont_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::MainTextEditor *ui;
     QLabel *fLabCurFile;
@@ -34,6 +42,8 @@ private:
     QFontComboBox *comboFont;
 
     void initUI(void);
+
+    void initSignalSlots();
 };
 
 #endif // MAINTEXTEDITOR_H
