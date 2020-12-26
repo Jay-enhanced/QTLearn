@@ -23,3 +23,36 @@ ulong toULong(bool *ok=nullptr, int base=10) const
 qlonglong toLongLong(bool *ok=nullptr, int base=10) const
 qulonglong toULongLong(bool *ok=nullptr, int base=10) const
 ```
+QString类从字符串转换为浮点数的函数
+```ruby
+float toFloat(bool *ok=nullptr) const;
+double toDouble(bool *ok=nullptr) const;
+```
+Message弹窗
+```ruby
+QMessageBox *warningMessageBox = new QMessageBox("错误",
+                                                    "数量输入应为整数",
+                                                    QMessageBox::Critical,
+                                                    QMessageBox::Ok | QMessageBox::Default,
+                                                    QMessageBox::Cancel | QMessageBox::Escape,
+                                                    0);
+```
+QString浮点数设置显示小数点位数
+```ruby
+number(double, char f='g', int prec=6)
+asprintf(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(1, 2)
+setNum(float, char f='g', int prec=6)
+setNum(double, char f='g', int prec=6)
+sprintf(const char *format, ...) Q_ATTRIBUTE_FORMAT_PRINTF(2, 3)
+```
+QString类进制转换函数
+```ruby
+QString &setNum(short, int base=10)
+QString &setNum(ushort, int base=10)
+QString &setNum(int, int base=10)
+QString &setNum(uint, int base=10)
+QString &setNum(long, int base=10)
+QString &setNum(ulong, int base=10)
+QString &setNum(qlonglong, int base=10)
+QString &setNum(qulonglong, int base=10)
+```
