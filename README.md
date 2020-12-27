@@ -9,8 +9,8 @@
 3. 将ico文件放到项目的根目录下，然后在.pro文件中添加`RC_ICONS = xxx.ico`，ico文件必须为正式的，不是那种改后缀名的才可以。
 
 ## 第四章
-### 4.1字符串与输入输出
-#### 4.1.1字符串与数值之间的转换
+### 4.1 字符串与输入输出
+#### 4.1.1 字符串与数值之间的转换
 QString类从字符串转换为整数的函数
 ```ruby
 int toInt(bool *ok=nullptr, int base=10) const
@@ -56,3 +56,7 @@ QString &setNum(ulong, int base=10)
 QString &setNum(qlonglong, int base=10)
 QString &setNum(qulonglong, int base=10)
 ```
+#### 4.1.2 QString的常用功能
+- append()和prepend()
+append()在字符串的前面添加字符串，prepend()在字符串的后面添加字符串。
+- toUpper()和toLower()
