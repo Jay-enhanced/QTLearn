@@ -57,8 +57,8 @@ QString &setNum(qlonglong, int base=10)
 QString &setNum(qulonglong, int base=10)
 ```
 #### 4.1.2 QString的常用功能
-1. `append()`add a string from head.
-2. `prepend()`add a string from tail.
+1. `append()`add a string from tail.
+2. `prepend()`add a string from head.
 3. `toUpper()`All letters of the string are converted to uppercase.
 4. `toLower()`All letters of the string are converted to lowercase.
 3. `count()`,`size`,`length`, The three exactly the same functions return the number of characters in the string.A Chinese character is a character.
