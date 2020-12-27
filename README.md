@@ -73,3 +73,5 @@ QString &setNum(qulonglong, int base=10)
 12. `left()`Indicates how many characters are taken from the left side of the string.
 13. `right()`Indicates how many characters are taken from the right side of the string.
 14. `section()`Is a function that extract the string from start to end with sep as the separator from the string.
+#### 4.1.2 SpinBox的使用
+QSpinBox用于整数的显示和输入，可以表示各种进制，也可以在显示框中添加前缀和后缀。QDoubleSpinBox用于显示和输入浮点数，可以设置小数的位数，也可以设置前缀和后缀。
