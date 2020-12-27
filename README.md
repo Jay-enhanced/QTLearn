@@ -57,6 +57,19 @@ QString &setNum(qlonglong, int base=10)
 QString &setNum(qulonglong, int base=10)
 ```
 #### 4.1.2 QString的常用功能
-- append()和prepend()
-append()在字符串的前面添加字符串，prepend()在字符串的后面添加字符串。
-- toUpper()和toLower()
+1. `append()`add a string from head.
+2. `prepend()`add a string from tail.
+3. `toUpper()`All letters of the string are converted to uppercase.
+4. `toLower()`All letters of the string are converted to lowercase.
+3. `count()`,`size`,`length`, The three exactly the same functions return the number of characters in the string.A Chinese character is a character.
+4. `trimmed()`,Remove spaces at the beginning and the end of the string.
+5. `simplified()`, Remove spaces at the beginning and the end of the string, and remove the consecutive spaces in the middle.
+6. `indexOf()`Find the first occurrence of a string.
+7. `lastIndexOf()`Find the last occurrence of a string.
+8. `isNull()`and`isEmpty()`are functions to determine whether a string is empty.But only the unassigned string, `isNull()`returns true.Generally use `isEmpty()`to determine whether the string is empty or not.
+9. `contains()`determines whether a string is contained in the string, and allows you to specify whether it is case sensitive.
+10. `endsWith()`determines whether to end with a string.
+11. `startsWith()`determines whether to start with a string.
+12. `left()`Indicates how many characters are taken from the left side of the string.
+13. `right()`Indicates how many characters are taken from the right side of the string.
+14. `section()`Is a function that extract the string from start to end with sep as the separator from the string.
